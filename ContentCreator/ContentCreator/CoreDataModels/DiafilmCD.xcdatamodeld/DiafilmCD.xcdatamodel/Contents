@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CDAlbum" representedClassName="CDAlbum" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="localDiafilms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDiafilm" inverseName="whichAlbum" inverseEntity="CDDiafilm" syncable="YES"/>
+        <relationship name="owner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="allUserAlbums" inverseEntity="CDUser" syncable="YES"/>
+    </entity>
+    <entity name="CDComment" representedClassName="CDComment" syncable="YES">
+        <attribute name="audioPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="emotionType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="allUserComments" inverseEntity="CDUser" syncable="YES"/>
+        <relationship name="whichDiafilm" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDDiafilm" inverseName="comments" inverseEntity="CDDiafilm" syncable="YES"/>
+    </entity>
+    <entity name="CDDiafilm" representedClassName="CDDiafilm" syncable="YES">
+        <attribute name="audioPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="intToken" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="strToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbPath" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDComment" inverseName="whichDiafilm" inverseEntity="CDComment" syncable="YES"/>
+        <relationship name="whichAlbum" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDAlbum" inverseName="localDiafilms" inverseEntity="CDAlbum" syncable="YES"/>
+        <relationship name="whoTook" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="diafilms" inverseEntity="CDUser" syncable="YES"/>
+    </entity>
+    <entity name="CDUser" representedClassName="CDUser" syncable="YES">
+        <attribute name="fbid" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userpicPath" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="allUserAlbums" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDAlbum" inverseName="owner" inverseEntity="CDAlbum" syncable="YES"/>
+        <relationship name="allUserComments" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CDComment" inverseName="owner" inverseEntity="CDComment" syncable="YES"/>
+        <relationship name="diafilms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDiafilm" inverseName="whoTook" inverseEntity="CDDiafilm" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDAlbum" positionX="25" positionY="-90" width="128" height="90"/>
+        <element name="CDComment" positionX="135" positionY="315" width="128" height="120"/>
+        <element name="CDDiafilm" positionX="268" positionY="-12" width="128" height="180"/>
+        <element name="CDUser" positionX="-90" positionY="102" width="128" height="135"/>
+    </elements>
+</model>

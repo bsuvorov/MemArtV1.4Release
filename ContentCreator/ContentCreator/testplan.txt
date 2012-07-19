@@ -1,0 +1,73 @@
+-- Testplan prior to submit to the app store / ad-hoc release to testers --
+
+Step 1.
+0. Delete Application from iPhone
+1. Remove Application from Facebook account
+2. Install application
+3. PASS if: Content shows up in Popular view
+
+Step 2.
+1. Log into Facebook
+2. Look at Facebook options and cancel sign in
+4. PASS if: Facebook sign in & cancelling from Facebook brings you back to app w/o interruption of service
+
+Step 3:
+1. Log into Facebook
+2. Look at Facebook options and confirm sign in
+3. PASS if: Facebook sign in & loggin in from Facebook brings you back to app w/o interruption of service and shows you your friends posts in activity view.
+
+
+Stpe 4.
+1. Click on options Window. 
+2. Does it look correct? Then PASS
+
+Step 5.
+1. Click on create Window
+2. Does Camera show up? Then Pass
+
+Step 5.
+1. Press Cancel and return to activity view?
+PASS
+
+Step 6.
+1. Press rotate button - does it rotate?
+If yes, PASS
+
+Step 7.
+1. Does content populate when ou press the rotate button again (given new content is available)?
+If yes, PASS
+
+Step 8.
+1. Does content populate when you scroll down and press load more button?
+If yes, pASS
+
+
+Step 9.
+Does activity view stop/start showing new  posts from removed/addede FB friends?
+(not this is subject to Facebook database - it might take few minutes for FB to reflect FB friend removal/addition)
+
+Step 10:
+Share to Facebook - make sure permissions post succeeded (subject to permissions)
+
+Step 11:
+Change app posting permisssions to "None" and try posting on FB again.
+App should come back with user notification.
+
+Step 12:.
+Signout from Facebook - make sure content is deleted, with exception for content in Anynoumous mode.
+
+Step 13:
+Anonymous mode: add 5 diafilms. Kill the app. Start it over and make sure you see 5 diafilms you've created.
+
+Step 14:
+Enable airplane mode and create few diafilms.
+Reenable interenet connect, hit refresh button and make sure content will get uploaded.
+
+Step 15:
+Anonymous mode:
+1. Check username is Anonymous in options.
+2. Privacy options at end of diafilm creation should not show up.
+3. When clicking on FB to share form Activity view, user should get message sign in first.
+
+Step 16.
+Audio comments : FILL OUT THE BLANKS.

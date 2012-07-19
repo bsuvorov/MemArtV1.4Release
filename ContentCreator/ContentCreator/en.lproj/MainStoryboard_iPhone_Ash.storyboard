@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nhS-lQ-cfe">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--captureViewController-->
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="captureViewController" id="2" userLabel="captureViewController" customClass="CaptureViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CXM-o1-Y4T">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="camera_button.png" id="Wmr-N2-g7k">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <connections>
+                        <segue destination="Qdb-bL-gJN" kind="modal" identifier="AudioRecord" id="Vxp-K7-IDf"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1039" y="879"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="tht-5s-h6d">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hA-fP-GVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="tuM-oy-gXQ" customClass="NotificationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dpi-I1-657">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="s7O-ix-mCJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="BWi-Iw-drZ" userLabel="TopBarView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="status_bar.png" id="Ymv-xi-H1g">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="srv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="DEd-Xf-n97">
+                                            <rect key="frame" x="168" y="12" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.95830502719999999" green="0.02179174146" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="lcl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hGl-Hn-XEK">
+                                            <rect key="frame" x="222" y="12" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.47444670900000002" green="0.95830502719999999" blue="0.30591423400000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" alpha="0.80000001192092896" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oVx-wY-Ikn">
+                                            <rect key="frame" x="277" y="5" width="32" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" image="refresh_button.png">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="refreshButtonClick:" destination="fFI-Vb-s9i" eventType="touchUpInside" id="bK2-JA-Zl6"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="notifications_2bubbles_icon.png" id="vKr-qu-qmU">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Wun-yp-hmc"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1039" y="1437"/>
+        </scene>
+        <!--Option View Controller-->
+        <scene sceneID="sP8-7T-PBM">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqJ-Ug-LR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Dul-A3-q1t" customClass="OptionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="D7g-al-Fdy">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="options_screen.png" id="kSd-Nt-YAO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KQg-Jb-eT1">
+                                <rect key="frame" x="26" y="248" width="268" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="FB_signin_button.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignInPressed:" destination="Dul-A3-q1t" eventType="touchUpInside" id="J2n-qT-Hpp"/>
+                                    <action selector="signupWithFBPressed:" destination="QXc-B3-38I" eventType="touchUpInside" id="McR-9s-XMq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tEd-Wv-u2s">
+                                <rect key="frame" x="26" y="248" width="268" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="FBLogout" image="FB_signout_button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogoutPressed:" destination="Dul-A3-q1t" eventType="touchUpInside" id="PSk-Gm-STb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Version 1.0 (1.0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oce-Kf-pPj">
+                                <rect key="frame" x="26" y="370" width="268" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Copyright (c) 2012 - Dearlena Inc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YEO-MS-PYy">
+                                <rect key="frame" x="26" y="385" width="268" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="rVR-ag-qXi">
+                                <rect key="frame" x="26" y="203" width="268" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Why sign in?" backgroundImage="why_sign_in_button.png">
+                                    <color key="titleColor" red="0.52941179275512695" green="0.5215686559677124" blue="0.5215686559677124" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnWhySignInPressed:" destination="Dul-A3-q1t" eventType="touchUpInside" id="F4f-QN-sYr"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current sign in type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="bdl-pX-nqJ">
+                                <rect key="frame" x="47" y="330" width="122" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Anonymous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cl3-Rg-iqW" userLabel="Label - Signintypevalue">
+                                <rect key="frame" x="169" y="330" width="125" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Anonymous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ayg-Aw-Km0" userLabel="Label - SigninNameValue">
+                                <rect key="frame" x="164" y="308" width="125" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Signed in as:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tnC-VV-eYI">
+                                <rect key="frame" x="33" y="308" width="128" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="settings_button.png" id="MNS-nV-1tT">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="appVersionString" destination="oce-Kf-pPj" id="axG-2Z-WXI"/>
+                        <outlet property="btnFBSignIn" destination="KQg-Jb-eT1" id="rYa-Gu-fSx"/>
+                        <outlet property="btnWhySignIn" destination="rVR-ag-qXi" id="Wr9-5C-Drt"/>
+                        <outlet property="fbLogout" destination="tEd-Wv-u2s" id="G8z-o9-VuU"/>
+                        <outlet property="lblSignInName" destination="ayg-Aw-Km0" id="egQ-Gx-yEu"/>
+                        <outlet property="lblSignInType" destination="cl3-Rg-iqW" id="9IS-i9-XES"/>
+                        <segue destination="RQk-ZE-Erf" kind="modal" identifier="launchFAQView" id="xDY-VS-nHj"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1039" y="2037"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sZc-d7-l9e">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SxF-Xz-fpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="RQk-ZE-Erf" customClass="FAQViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HwO-YH-Dff">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="kq6-Qt-MJv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Pfn-Q1-lya">
+                                <rect key="frame" x="275" y="8" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="cancel_button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="RQk-ZE-Erf" eventType="touchUpInside" id="t6z-f1-ddY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnWebViewDone" destination="Pfn-Q1-lya" id="E5q-HM-HbV"/>
+                        <outlet property="faqWebView" destination="kq6-Qt-MJv" id="5pn-Rm-0sM"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1521" y="2037"/>
+        </scene>
+        <!--Dearfilm Phone Signup View Controller-->
+        <scene sceneID="u0G-cp-NHk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoc-1R-oUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="nhS-lQ-cfe" customClass="DearfilmPhoneSignupViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fVp-YN-5w4">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Default.png" id="uWI-tS-qYw">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" id="FLn-hN-UUI">
+                                <rect key="frame" x="142" y="278" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.95830502719999999" green="0.61678832116788318" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="isFBloadedSpinner" destination="FLn-hN-UUI" id="yGe-By-hl5"/>
+                        <segue destination="hMo-CI-yTk" kind="modal" identifier="FBLoginSeg" id="57o-ZE-gRR"/>
+                        <segue destination="QXc-B3-38I" kind="modal" identifier="DemoSegueWithSignIn" id="i6x-EW-K12"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-398" y="879"/>
+        </scene>
+        <!--I Phone Tab Bar View Controller-->
+        <scene sceneID="gyk-tC-gFc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y37-Wi-0yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" hidesBottomBarWhenPushed="YES" id="hMo-CI-yTk" customClass="iPhoneTabBarViewController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="mlA-0X-AaW" userLabel="dlUITabBar" customClass="dlUITabBar">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.95830502719999999" green="0.61678832120000004" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="myTabBar" destination="mlA-0X-AaW" id="6dh-bg-3Dd"/>
+                        <segue destination="fFI-Vb-s9i" kind="relationship" relationship="viewControllers" id="krH-q5-O8b"/>
+                        <segue destination="38Q-Xk-VNY" kind="relationship" relationship="viewControllers" id="i5v-jm-8po"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="hiB-Vk-xn5"/>
+                        <segue destination="Dul-A3-q1t" kind="relationship" relationship="viewControllers" id="U0J-Mv-SJF"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="157" y="879"/>
+        </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="C4o-Qs-Kv7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzC-Mu-09a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="fFI-Vb-s9i" customClass="ActivityViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xmq-nx-K5n">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="370" sectionHeaderHeight="38" sectionFooterHeight="30" id="ucK-bl-jgA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="412"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.87843143940000001" green="0.87843143940000001" blue="0.87843143940000001" alpha="1" colorSpace="deviceRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="6Xi-en-J1u" userLabel="HeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="status_bar.png" id="W1L-dB-KZr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="srv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jXt-Qv-t2F">
+                                            <rect key="frame" x="168" y="12" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.95830502719999999" green="0.02179174146" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="lcl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="47O-Rw-wDX">
+                                            <rect key="frame" x="222" y="12" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.47444670898878966" green="0.95830502719999999" blue="0.30591423403799733" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" alpha="0.80000000000000004" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wp7-ig-Zyw">
+                                            <rect key="frame" x="277" y="5" width="32" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" image="refresh_button.png">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="refreshButtonClick:" destination="fFI-Vb-s9i" eventType="touchUpInside" id="Uap-lh-4l9"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="0hC-Rh-S41" userLabel="FooterView">
+                                    <rect key="frame" x="0.0" y="38" width="320" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hn7-9e-I0s">
+                                            <rect key="frame" x="85" y="39" width="151" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Load More" backgroundImage="loading_button_background.png">
+                                                <color key="titleColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnLoadMorePressed:" destination="fFI-Vb-s9i" eventType="touchUpInside" id="RP9-9R-6nb"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="deviceRGB"/>
+                                </view>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fFI-Vb-s9i" id="EZX-WX-HLX"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" id="TJf-Or-wWy" userLabel="CreatingAlert">
+                                <rect key="frame" x="85" y="153" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" id="p2E-vP-nj3">
+                                        <rect key="frame" x="57" y="56" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.95830502719999999" green="0.61678832120000004" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hGS-e3-tdo">
+                                <rect key="frame" x="0.0" y="383" width="320" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.60392159223556519" green="0.77647066116333008" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        </accessibility>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="home_button.png" id="dZR-aJ-HMd">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="bbtnRefresh" destination="Wp7-ig-Zyw" id="e8S-jU-6I6"/>
+                        <outlet property="btnLoadMore" destination="hn7-9e-I0s" id="I45-dr-43C"/>
+                        <outlet property="headerView" destination="6Xi-en-J1u" id="ZlA-qd-f4s"/>
+                        <outlet property="lblNewDiafilmsCount" destination="47O-Rw-wDX" id="9iR-AQ-VlM"/>
+                        <outlet property="lblNotification" destination="hGS-e3-tdo" id="LTR-sS-ybo"/>
+                        <outlet property="lblTotalDiafilmsWaitingForDowload" destination="jXt-Qv-t2F" id="nPM-x5-4Kd"/>
+                        <outlet property="loadingView" destination="TJf-Or-wWy" id="C8u-Hw-XRe"/>
+                        <outlet property="tableView" destination="ucK-bl-jgA" id="hzw-A8-xBa"/>
+                        <segue destination="VFW-RM-H1J" kind="modal" identifier="pushFullscreen" modalTransitionStyle="coverVertical" id="tSd-Sp-6yV"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1039" y="-319"/>
+        </scene>
+        <!--Fullscreen View Controller-->
+        <scene sceneID="cCL-gb-hny">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMn-sw-Yvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="VFW-RM-H1J" customClass="FullscreenViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3hy-4h-jdd">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="efM-bk-Jmd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mO3-ZT-wNH">
+                                <rect key="frame" x="280" y="7" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="cancel_button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitPressed:" destination="VFW-RM-H1J" eventType="touchUpInside" id="dPF-YK-7lx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4su-CV-IhZ"/>
+                    <connections>
+                        <outlet property="btnExitView" destination="mO3-ZT-wNH" id="fpu-1L-XrG"/>
+                        <outlet property="diaFilmImageView" destination="efM-bk-Jmd" id="I2U-Re-Nm8"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1610" y="-319"/>
+        </scene>
+        <!--Curated View Controller-->
+        <scene sceneID="PDq-HI-h91">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otP-yw-6jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="38Q-Xk-VNY" customClass="CuratedViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcK-Vd-0Vl">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="370" sectionHeaderHeight="22" sectionFooterHeight="22" id="SAP-Ci-M02">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="412"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="deviceRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="PLq-Jx-3aJ" userLabel="TopBarView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="status_bar_featured.png" id="uH4-WF-FJF">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="srv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rOB-Em-dxa">
+                                            <rect key="frame" x="168" y="12" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.95830502719999999" green="0.02179174146" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="lcl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tIO-q6-A7X">
+                                            <rect key="frame" x="222" y="12" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.47444670900000002" green="0.95830502719999999" blue="0.30591423400000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" alpha="0.80000001192092896" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XIc-ay-FXu">
+                                            <rect key="frame" x="277" y="5" width="32" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" image="refresh_button.png">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="refreshButtonClick:" destination="38Q-Xk-VNY" eventType="touchUpInside" id="ZoS-rS-RIh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="wUz-Yi-Uja" userLabel="FooterView">
+                                    <rect key="frame" x="0.0" y="38" width="320" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2aD-OH-BtH">
+                                            <rect key="frame" x="85" y="39" width="151" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Load More" backgroundImage="loading_button_background.png">
+                                                <color key="titleColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" red="0.85098046064376831" green="0.85098046064376831" blue="0.85098046064376831" alpha="1" colorSpace="deviceRGB"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnLoadMorePressed:" destination="38Q-Xk-VNY" eventType="touchUpInside" id="3u4-rO-80C"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="deviceRGB"/>
+                                </view>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="38Q-Xk-VNY" id="yVo-DK-rqp"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" alpha="0.94999998807907104" contentMode="scaleToFill" id="D1d-4n-pJb" userLabel="CreatingAlert">
+                                <rect key="frame" x="85" y="153" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" id="QQr-c1-bdZ">
+                                        <rect key="frame" x="57" y="56" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.95830502719999999" green="0.61678832120000004" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="wi1-Af-Hpn">
+                                <rect key="frame" x="80" y="401" width="240" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.5011405109" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        </accessibility>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="public_feed_star_icon.png" id="n7X-YV-lLd">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="bbtnRefresh" destination="XIc-ay-FXu" id="i7m-z3-Dyr"/>
+                        <outlet property="btnLoadMore" destination="2aD-OH-BtH" id="Da5-4f-gGf"/>
+                        <outlet property="headerView" destination="PLq-Jx-3aJ" id="a4o-zc-roX"/>
+                        <outlet property="lblNewDiafilmsCount" destination="tIO-q6-A7X" id="2aS-sX-Cnm"/>
+                        <outlet property="lblNotification" destination="wi1-Af-Hpn" id="25P-Xo-Sux"/>
+                        <outlet property="lblTotalDiafilmsWaitingForDowload" destination="rOB-Em-dxa" id="Rue-QG-diK"/>
+                        <outlet property="loadingView" destination="D1d-4n-pJb" id="0sH-h0-Tx3"/>
+                        <outlet property="tableView" destination="SAP-Ci-M02" id="q6C-bA-MXH"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1039" y="241"/>
+        </scene>
+        <!--Audio Recorder View Controller-->
+        <scene sceneID="FPw-ci-hWX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojm-ur-daJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Qdb-bL-gJN" customClass="AudioRecorderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHz-oJ-8rr">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="18D-v1-fhS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="422"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tab_bar.png" id="9tf-YE-QaY">
+                                <rect key="frame" x="0.0" y="422" width="320" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yEG-Mj-OCA" userLabel="Button - No">
+                                <rect key="frame" x="61" y="416" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="cancel_icon.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRejectTouched:" destination="Qdb-bL-gJN" eventType="touchUpInside" id="gip-BF-9OB"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gLu-SS-MRv" userLabel="Button - Done">
+                                <rect key="frame" x="129" y="400" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="stop_recording_button.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopRecording:" destination="Qdb-bL-gJN" eventType="touchUpInside" id="s8Z-d4-hnD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="092-dJ-IxX" userLabel="Button - Record">
+                                <rect key="frame" x="129" y="400" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="record_button.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startRecording:" destination="Qdb-bL-gJN" eventType="touchUpInside" id="AkZ-Yw-uzM"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aqs-Uo-73h" userLabel="Button - Yes">
+                                <rect key="frame" x="212" y="416" width="50" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="approve_icon.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnApprovedTouched:" destination="Qdb-bL-gJN" eventType="touchUpInside" id="QSI-aj-f8J"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="audio_recording_toolbar.png" id="J1u-Q0-LIp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontSizeToFit="NO" id="vwN-tE-7pH">
+                                <rect key="frame" x="102" y="10" width="218" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" id="dnr-7N-b7e" userLabel="labelbg" customClass="UIImageView">
+                                <rect key="frame" x="100" y="146" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="retake_button.png" id="OxB-dz-B5j">
+                                <rect key="frame" x="155" y="387" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="g5L-mb-UlH"/>
+                    <connections>
+                        <outlet property="btnApproveRecording" destination="aqs-Uo-73h" id="qS5-QW-4Dq"/>
+                        <outlet property="btnRejectRecording" destination="yEG-Mj-OCA" id="Ru6-ch-5Ia"/>
+                        <outlet property="btnStartRecording" destination="092-dJ-IxX" id="ioE-tb-xym"/>
+                        <outlet property="btnStopRecording" destination="gLu-SS-MRv" id="4vW-nG-rfJ"/>
+                        <outlet property="countdownLabel" destination="dnr-7N-b7e" id="TNg-qy-e6y"/>
+                        <outlet property="imageView" destination="18D-v1-fhS" id="0v0-x6-Hdg"/>
+                        <outlet property="ivReRecord" destination="OxB-dz-B5j" id="l3O-wz-eQs"/>
+                        <outlet property="labelRecordingImage" destination="J1u-Q0-LIp" id="JuL-qx-eSp"/>
+                        <outlet property="lblRecording" destination="vwN-tE-7pH" id="6eD-Lf-2Xy"/>
+                        <outlet property="mainView" destination="yHz-oJ-8rr" id="R2S-DQ-Yh7"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1570" y="869"/>
+        </scene>
+        <!--Demo Activity With Sign In - Home-->
+        <scene sceneID="lp5-eP-Y4o">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sN-FC-Vvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="QXc-B3-38I" customClass="DemoActivityWithSignIn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2N-gw-Wmv">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="320" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dch-V2-LqV">
+                                <rect key="frame" x="0.0" y="38" width="320" height="382"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="320" id="tHk-XH-tyu" customClass="ActivityViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="319"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="5EX-zT-pQs">
+                                                    <rect key="frame" x="3" y="0.0" width="315" height="315"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.95686280729999995" green="0.95686280729999995" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="DwR-N5-4cf">
+                                                    <rect key="frame" x="10" y="9" width="35" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView contentMode="scaleToFill" id="HzE-AS-BvI">
+                                                    <rect key="frame" x="10" y="8" width="300" height="300"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="diafilmPic" destination="HzE-AS-BvI" id="S7T-gr-kWg"/>
+                                            <outlet property="userPic" destination="DwR-N5-4cf" id="tgB-dg-9fA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QXc-B3-38I" id="dN8-5m-HHC"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="7OD-Pb-yfx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="status_bar.png" id="HuX-Mk-Dwl">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AJy-qJ-6aU">
+                                        <rect key="frame" x="270" y="3" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="refresh_button.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refreshButtonClick:" destination="QXc-B3-38I" eventType="touchUpInside" id="tKJ-AR-g34"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="lcl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Aua-fM-hdA">
+                                        <rect key="frame" x="143" y="9" width="33" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.47444670900000002" green="0.95830502719999999" blue="0.30591423400000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="srv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="E0V-X9-gcQ">
+                                        <rect key="frame" x="207" y="9" width="33" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.95830502719999999" green="0.02179174146" blue="0.07831788378" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e5d-mw-Qaj">
+                                <rect key="frame" x="0.0" y="418" width="320" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="FB sign in" image="facebook_login_screen.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupWithFBPressed:" destination="QXc-B3-38I" eventType="touchUpInside" id="woA-2X-N9g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        </accessibility>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_button.png" id="TMh-W9-2Dz"/>
+                    <connections>
+                        <outlet property="bbtnRefresh" destination="AJy-qJ-6aU" id="lDa-YC-V0X"/>
+                        <outlet property="headerView" destination="7OD-Pb-yfx" id="6Os-ia-FSf"/>
+                        <outlet property="lblNewDiafilmsCount" destination="Aua-fM-hdA" id="nVW-J9-vdC"/>
+                        <outlet property="lblTotalDiafilmsWaitingForDowload" destination="E0V-X9-gcQ" id="woA-XO-vIq"/>
+                        <outlet property="tableView" destination="Dch-V2-LqV" id="nwO-jo-Vfr"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="157" y="241"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="FB_signin_button.png" width="272" height="38"/>
+        <image name="FB_signout_button.png" width="268" height="37"/>
+        <image name="approve_icon.png" width="30" height="26"/>
+        <image name="audio_recording_toolbar.png" width="640" height="93"/>
+        <image name="camera_button.png" width="30" height="30"/>
+        <image name="cancel_button.png" width="28" height="28"/>
+        <image name="cancel_icon.png" width="30" height="30"/>
+        <image name="facebook_login_screen.png" width="640" height="86"/>
+        <image name="home_button.png" width="30" height="30"/>
+        <image name="loading_button_background.png" width="146" height="30"/>
+        <image name="notifications_2bubbles_icon.png" width="28" height="21"/>
+        <image name="options_screen.png" width="320" height="480"/>
+        <image name="public_feed_star_icon.png" width="24" height="24"/>
+        <image name="record_button.png" width="56" height="56"/>
+        <image name="refresh_button.png" width="30" height="28"/>
+        <image name="retake_button.png" width="27" height="31"/>
+        <image name="settings_button.png" width="30" height="30"/>
+        <image name="status_bar.png" width="320" height="38"/>
+        <image name="status_bar_featured.png" width="320" height="38"/>
+        <image name="stop_recording_button.png" width="56" height="56"/>
+        <image name="tab_bar.png" width="640" height="83"/>
+        <image name="why_sign_in_button.png" width="268" height="37"/>
+    </resources>
+    <classes>
+        <class className="ActivityViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="audioSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="backgroundLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="btnAddComment" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnViewComments" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cpv" candidateClass="CommentPlaybackView"/>
+                <relationship kind="outlet" name="crv" candidateClass="CommentRecordView"/>
+                <relationship kind="outlet" name="csv" candidateClass="CommentSummaryView"/>
+                <relationship kind="outlet" name="diafilmPic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lblCommentCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lpgr" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="maxProgressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minProgressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="speakerPic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="userPic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="usernameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ActivityViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bbtnRefresh" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnLoadMore" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="headerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="lblNewDiafilmsCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblNotification" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblTotalDiafilmsWaitingForDowload" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loadingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="AudioRecorderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioRecorderViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnApproveRecording" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnRejectRecording" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnStartRecording" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnStopRecording" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="countdownLabel" candidateClass="UIView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="ivReRecord" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="labelRecordingImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lblRecording" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="CaptureViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CaptureViewController.h"/>
+        </class>
+        <class className="CommentPlaybackView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CommentPlaybackView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnCancel" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnNextComment" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnPause" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnPrevComment" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="ivCommenter" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lblCommenter" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblProgressText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sliderACP" candidateClass="UIProgressView"/>
+            </relationships>
+        </class>
+        <class className="CommentRecordView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CommentRecordView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnApprove" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnCancel" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnStop" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lblProgressText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="slider" candidateClass="UIProgressView"/>
+            </relationships>
+        </class>
+        <class className="CommentSummaryView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CommentSummaryView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnCancel" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="CuratedViewController" superclassName="ActivityViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CuratedViewController.h"/>
+        </class>
+        <class className="DearfilmPhoneSignupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DearfilmPhoneSignupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="isFBloadedSpinner" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="DemoActivityWithSignIn" superclassName="ActivityViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DemoActivityWithSignIn.h"/>
+        </class>
+        <class className="FAQViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FAQViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnWebViewDone" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="faqWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="FullscreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FullscreenViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnExitView" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="diaFilmImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="NotificationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NotificationViewController.h"/>
+        </class>
+        <class className="OptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OptionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="appVersionString" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="btnFBSignIn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnWhySignIn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fbLogout" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lblCountdownValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblSignInName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblSignInType" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sldCountdown" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="dlUITabBar" superclassName="UITabBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/dlUITabBar.h"/>
+        </class>
+        <class className="iPhoneTabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPhoneTabBarViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTabBar" candidateClass="UITabBar"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
