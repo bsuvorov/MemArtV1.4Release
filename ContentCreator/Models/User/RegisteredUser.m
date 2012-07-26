@@ -53,7 +53,7 @@ static AllUsers * allUsersModel = nil;
     self = [super init];
     if (self) {
         
-        NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
         self.pathToUserPics = [documentsPath stringByAppendingPathComponent:@"userpics"];
         [[NSFileManager defaultManager] createDirectoryAtPath:self.pathToUserPics withIntermediateDirectories:NO attributes:nil error:nil];
     }

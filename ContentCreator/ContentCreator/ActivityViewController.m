@@ -910,7 +910,7 @@ static int startDetecting = 50;
     NSString * audioFilename = [df getAudioFilename];
     
     
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     
@@ -1318,7 +1318,7 @@ static int startDetecting = 50;
             break;
     }
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
                                                          NSUserDomainMask, YES);
     NSString *appDocumentDirectory = [paths lastObject];
     audioCommentTmpFile = [appDocumentDirectory stringByAppendingPathComponent:@"tmpComment.caf"];

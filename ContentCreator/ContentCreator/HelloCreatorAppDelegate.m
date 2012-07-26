@@ -19,6 +19,7 @@
 @synthesize window;
 @synthesize rootViewController;
 
+@synthesize imagePickerController = _imagePickerController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

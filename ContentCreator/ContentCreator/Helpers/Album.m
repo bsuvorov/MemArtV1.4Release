@@ -62,7 +62,7 @@
     
     self.diafilms = [[NSMutableArray alloc] init];
     
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     self.albumPath = [documentsPath stringByAppendingPathComponent:name];
     [[NSFileManager defaultManager] createDirectoryAtPath:self.albumPath withIntermediateDirectories:NO attributes:nil error:nil];
     

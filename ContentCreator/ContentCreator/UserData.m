@@ -143,7 +143,7 @@ static UserData * userData = nil;
 - (id) init
 {
     if (self = [super init]) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
                                                              NSUserDomainMask, YES);
         NSString *appDocumentDirectory = [paths lastObject];
         self.userPicFile  = [appDocumentDirectory stringByAppendingPathComponent:@"userpic.jpg"];
@@ -409,7 +409,7 @@ static UserData * userData = nil;
     // if it is first time starting the app, we need to register and create database.
     if (!self.appCDDocument) 
     {  
-        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
         url = [url URLByAppendingPathComponent:@"DiafilmCD_2"];
         self.appCDDocument = [[UIManagedDocument alloc] initWithFileURL:url];
     } else {
@@ -423,15 +423,26 @@ static UserData * userData = nil;
     if (![[NSFileManager defaultManager] fileExistsAtPath:[self.appCDDocument.fileURL path]]) {
         // does not exist on disk, so create it
         [self.appCDDocument saveToURL:self.appCDDocument.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
-            [self.loginDelegate userDataPreLoaded:YES];
+            if (success)
+            {
+                NSLog(@"CDDocument created.");
+                [self.appCDDocument openWithCompletionHandler:^(BOOL success) {
+                    NSLog(@"CDDocument opened");
+                    [self.loginDelegate userDataPreLoaded:YES];
+                }];
+            } else {
+                NSAssert(0, @"Failed to create file");
+            }
         }];
     } else if (self.appCDDocument.documentState == UIDocumentStateClosed) {
         // exists on disk, but we need to open it
         [self.appCDDocument openWithCompletionHandler:^(BOOL success) {
+            NSLog(@" user data preloaded, UIDocumentStateClosed");
             [self.loginDelegate userDataPreLoaded:YES];
         }];
     } else if (self.appCDDocument.documentState == UIDocumentStateNormal) {
-            [self.loginDelegate userDataPreLoaded:YES];
+        NSLog(@" user data preloaded, UIDocumentStateNormal");
+        [self.loginDelegate userDataPreLoaded:YES];
     }
 }
 

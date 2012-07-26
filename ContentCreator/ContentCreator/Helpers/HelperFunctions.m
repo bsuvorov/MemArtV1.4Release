@@ -236,7 +236,7 @@
 
 + (NSString *) getWallDir
 {
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     
@@ -252,7 +252,7 @@
 
 + (NSString *) getUserpicDir
 {
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     
@@ -268,7 +268,7 @@
 
 + (NSString *) getDemoDir
 {
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     

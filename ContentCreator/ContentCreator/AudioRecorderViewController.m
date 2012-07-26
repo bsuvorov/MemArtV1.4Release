@@ -89,7 +89,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
                                                          NSUserDomainMask, YES);
     NSString *appDocumentDirectory = [paths lastObject];
     recordedTmpFile = [appDocumentDirectory stringByAppendingPathComponent:@"tmp.caf"];

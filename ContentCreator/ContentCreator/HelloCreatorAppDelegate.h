@@ -19,4 +19,6 @@
 @property (strong, nonatomic) UIWindow                   *window;
 @property (strong, nonatomic) iPhoneTabBarViewController *rootViewController;
 
+@property (nonatomic, strong) UIImagePickerController *imagePickerController;
+
 @end
