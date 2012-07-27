@@ -353,7 +353,7 @@
 
 - (void) dealloc
 {
-    NSLog(@"%s of %@", __FUNCTION__, self);
+    NSLog(@"[captureview dealloc]  %s of %@", __FUNCTION__, self);
 }
 
 
