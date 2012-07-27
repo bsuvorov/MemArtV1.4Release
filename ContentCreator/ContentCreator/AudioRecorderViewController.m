@@ -350,7 +350,7 @@
                                                                 message:@"Select privacy:" 
                                                                delegate:self 
                                                       cancelButtonTitle:nil
-                                                      otherButtonTitles:@"Private", @"Friends", @"Public", nil];
+                                                      otherButtonTitles:@"Only Me", @"Friends", @"Public", nil];
 
         [privacyAlert show];
     } else {
