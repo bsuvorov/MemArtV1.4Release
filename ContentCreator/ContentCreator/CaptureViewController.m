@@ -153,18 +153,18 @@
 
 - (void) displaySelected
 {
-    if (displayed != YES )
-    {
+    if (displayed != YES ) {
         displayed = YES;
     }
     
     HelloCreatorAppDelegate * appDelegate = (HelloCreatorAppDelegate *)([UIApplication sharedApplication].delegate);
     
-    NSAssert(!appDelegate.imagePickerController, @"picker has to be nil at this point, we alloc/dealloc it everytime we start using it and finish using it");
-    
-    
-    [self initCameraView];
-    [self loadCameraView];    
+    if (!appDelegate)
+    {
+        NSLog(@"picker has to be nil at this point, we alloc/dealloc it everytime we start using it and finish using it");
+        [self initCameraView];
+        [self loadCameraView];
+    }
     return;
 }
 
@@ -352,8 +352,10 @@
 }
 
 - (void) dealloc
-{
+{    
     NSLog(@"[captureview dealloc]  %s of %@", __FUNCTION__, self);
+//    HelloCreatorAppDelegate * appDelegate = (HelloCreatorAppDelegate *)([UIApplication sharedApplication].delegate);
+//    appDelegate.imagePickerController = nil;
 }
 
 
