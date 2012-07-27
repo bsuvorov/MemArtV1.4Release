@@ -58,6 +58,7 @@
     [self initVersionSection];
     [self initCountDownSection];
     [self initNameSection];
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated
