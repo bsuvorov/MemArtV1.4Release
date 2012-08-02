@@ -189,6 +189,7 @@
 		A1B49022157DBF77004C9445 /* DiafilmCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1B49020157DBF77004C9445 /* DiafilmCD.xcdatamodeld */; };
 		A1BF61811594076B00A68706 /* DiafilmFSSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF61801594076B00A68706 /* DiafilmFSSaver.m */; };
 		A1C05486159C1EFD001560FA /* CDCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C05485159C1EFD001560FA /* CDCleaner.m */; };
+		A1C1A0AF15CB49F700AC048E /* MemArt-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1C1A0AE15CB49F700AC048E /* MemArt-Info.plist */; };
 		A1C1AEC2155899B5005AFCFB /* iPhoneTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1AEC1155899B5005AFCFB /* iPhoneTabBarViewController.m */; };
 		A1C1AEC51558A342005AFCFB /* DearfilmPhoneSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1AEC41558A342005AFCFB /* DearfilmPhoneSignupViewController.m */; };
 		A1C1AECA1558A6FE005AFCFB /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1AEC91558A6FE005AFCFB /* UserData.m */; };
@@ -433,6 +434,8 @@
 		A1BF61801594076B00A68706 /* DiafilmFSSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiafilmFSSaver.m; path = Helpers/DiafilmFSSaver.m; sourceTree = "<group>"; };
 		A1C05484159C1EFD001560FA /* CDCleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDCleaner.h; path = CoreDataModels/CDCleaner.h; sourceTree = "<group>"; };
 		A1C05485159C1EFD001560FA /* CDCleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDCleaner.m; path = CoreDataModels/CDCleaner.m; sourceTree = "<group>"; };
+		A1C1A0AE15CB49F700AC048E /* MemArt-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MemArt-Info.plist"; sourceTree = "<group>"; };
+		A1C1A0B115CB4A0800AC048E /* MemArt-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MemArt-Prefix.pch"; sourceTree = "<group>"; };
 		A1C1AEC0155899B5005AFCFB /* iPhoneTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneTabBarViewController.h; sourceTree = "<group>"; };
 		A1C1AEC1155899B5005AFCFB /* iPhoneTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = iPhoneTabBarViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A1C1AEC31558A342005AFCFB /* DearfilmPhoneSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DearfilmPhoneSignupViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -977,6 +980,8 @@
 				3E29E442156CB6C900236435 /* icon114x114.png */,
 				3E7DD7F0159A375200C65360 /* Default@2x.png */,
 				3E7DD7F2159A380300C65360 /* Default.png */,
+				A1C1A0AE15CB49F700AC048E /* MemArt-Info.plist */,
+				A1C1A0B115CB4A0800AC048E /* MemArt-Prefix.pch */,
 				A19B18B41511CCDC0070B89A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -1251,6 +1256,7 @@
 				3EA575DA15B1282600A8A326 /* retake_button.png in Resources */,
 				3EA575DB15B1282600A8A326 /* retake_button@2x.png in Resources */,
 				3EA575DD15B12A7500A8A326 /* rerecord_button@2x.png in Resources */,
+				A1C1A0AF15CB49F700AC048E /* MemArt-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

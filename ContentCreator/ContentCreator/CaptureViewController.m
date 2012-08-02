@@ -158,8 +158,8 @@
     }
     
     HelloCreatorAppDelegate * appDelegate = (HelloCreatorAppDelegate *)([UIApplication sharedApplication].delegate);
-    
-    if (!appDelegate)
+
+    if (!appDelegate.imagePickerController)
     {
         NSLog(@"picker has to be nil at this point, we alloc/dealloc it everytime we start using it and finish using it");
         [self initCameraView];
